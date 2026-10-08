@@ -42,6 +42,6 @@
 <circle cx="722" cy="748" r="27" fill="#1B1F27"/><circle cx="722" cy="748" r="11" fill="#C9CED6"/>
 <circle cx="878" cy="748" r="27" fill="#1B1F27"/><circle cx="878" cy="748" r="11" fill="#C9CED6"/>
 </g>
-<rect x="30" y="826" width="270" height="46" rx="23" fill="#17171A" fill-opacity="0.75"/>
-<text x="165" y="856" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">Platzhalter · Foto folgt</text>
+<rect x="30" y="826" width="560" height="46" rx="23" fill="#17171A" fill-opacity="0.75"/>
+<text x="310" y="856" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">Platzhalter · Hier kommt euer Gruppenfoto aller acht</text>
 </svg>
