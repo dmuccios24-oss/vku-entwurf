@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="1000" height="900">
+<rect width="1000" height="900" fill="#DCE9F5"/>
+<circle cx="830" cy="150" r="58" fill="#F7D66B"/>
+<path d="M0 520 Q 250 410 500 495 T 1000 465 V900 H0 Z" fill="#A6CB92"/>
+<path d="M0 585 Q 320 500 660 570 T 1000 555 V900 H0 Z" fill="#82B272"/>
+<rect x="104" y="560" width="16" height="208" fill="#6B4F3A"/>
+<circle cx="112" cy="530" r="72" fill="#5E9E58"/>
+<circle cx="70" cy="575" r="44" fill="#56934F"/>
+<rect x="200" y="300" width="600" height="468" fill="#F4EFE6"/>
+<rect x="182" y="280" width="636" height="30" rx="4" fill="#3A3F47"/>
+<rect x="300" y="326" width="400" height="46" rx="8" fill="#17171A"/>
+<text x="500" y="358" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#FFFFFF">VKU · NOTHELFER</text>
+<rect x="246" y="400" width="230" height="170" fill="#A9C7E4" stroke="#3A3F47" stroke-width="6"/>
+<line x1="361" y1="400" x2="361" y2="570" stroke="#3A3F47" stroke-width="5"/>
+<rect x="560" y="490" width="112" height="278" fill="#3A3F47"/>
+<rect x="576" y="510" width="80" height="120" fill="#A9C7E4"/>
+<rect x="700" y="400" width="72" height="72" rx="8" fill="#2F6FDB"/>
+<rect x="719" y="414" width="13" height="42" fill="#FFFFFF"/>
+<rect x="719" y="443" width="36" height="13" fill="#FFFFFF"/>
+<rect x="0" y="768" width="1000" height="132" fill="#D6D1C7"/>
+<rect x="0" y="768" width="1000" height="8" fill="#C4BEB2"/>
+<g>
+<rect x="148" y="676" width="44" height="92" rx="20" fill="#17171A"/><circle cx="170" cy="654" r="19" fill="#E8C4A6"/>
+<rect x="206" y="684" width="44" height="84" rx="20" fill="#2F6FDB"/><circle cx="228" cy="662" r="18" fill="#C99A78"/>
+<rect x="264" y="672" width="44" height="96" rx="20" fill="#5C5A57"/><circle cx="286" cy="650" r="19" fill="#F1D3BC"/>
+<rect x="322" y="688" width="44" height="80" rx="20" fill="#F2B807"/><circle cx="344" cy="666" r="18" fill="#A97958"/>
+<rect x="380" y="678" width="44" height="90" rx="20" fill="#3F7D5A"/><circle cx="402" cy="656" r="19" fill="#E8C4A6"/>
+<rect x="438" y="682" width="44" height="86" rx="20" fill="#B5534C"/><circle cx="460" cy="660" r="18" fill="#F1D3BC"/>
+<rect x="496" y="674" width="44" height="94" rx="20" fill="#6C6F9E"/><circle cx="518" cy="652" r="19" fill="#C99A78"/>
+<rect x="554" y="680" width="44" height="88" rx="20" fill="#8A6F5C"/><circle cx="576" cy="658" r="18" fill="#E8C4A6"/>
+</g>
+<g>
+<path d="M705 690 Q 722 636 774 632 L 852 632 Q 896 636 912 690 Z" fill="#2F6FDB"/>
+<rect x="650" y="684" width="300" height="64" rx="26" fill="#2F6FDB"/>
+<path d="M722 686 Q 736 648 776 645 L 806 645 L 806 686 Z" fill="#CFE0FA"/>
+<path d="M816 645 L 850 645 Q 884 648 896 686 L 816 686 Z" fill="#CFE0FA"/>
+<rect x="828" y="700" width="28" height="28" rx="4" fill="#FFFFFF"/>
+<rect x="836" y="705" width="6" height="17" fill="#2F6FDB"/>
+<rect x="836" y="716" width="14" height="6" fill="#2F6FDB"/>
+<rect x="936" y="700" width="12" height="10" rx="3" fill="#FFE07A"/>
+<rect x="652" y="700" width="10" height="10" rx="3" fill="#E2463F"/>
+<circle cx="722" cy="748" r="27" fill="#1B1F27"/><circle cx="722" cy="748" r="11" fill="#C9CED6"/>
+<circle cx="878" cy="748" r="27" fill="#1B1F27"/><circle cx="878" cy="748" r="11" fill="#C9CED6"/>
+</g>
+<rect x="30" y="826" width="270" height="46" rx="23" fill="#17171A" fill-opacity="0.75"/>
+<text x="165" y="856" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">Platzhalter · Foto folgt</text>
+</svg>

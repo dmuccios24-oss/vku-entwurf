@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VKU Oberbaselbiet · Entwurf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+[hidden]{display:none !important}
+.site{--bg:#FBFAF7;--surface:#FFFFFF;--line:#E6E2DA;--ink:#17171A;--muted:#5C5A57;--accent:#F2B807;--accentInk:#17171A;--soft:#F3F0E9;
+  background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;transition:background .3s,color .3s}
+.site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#F5C531;--accentInk:#111111;--soft:#1D2024}
+a{color:var(--ink)}a:hover{color:var(--muted)}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:48px;box-sizing:border-box;width:100%}
+input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{color:var(--bg);opacity:.88}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{color:var(--ink);border-color:var(--ink)}
+.slot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.pick{background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:0 16px;min-height:44px;cursor:pointer;white-space:nowrap}
+.pick:hover{background:var(--accent);color:var(--accentInk);border-color:var(--accent)}
+.navlink{text-decoration:none;font-size:15px;color:var(--muted)}
+.navlink:hover{color:var(--ink)}
+.credit{opacity:.6;transition:opacity .2s}.credit:hover{opacity:1}
+.site.dark .credit-logo{filter:brightness(0) invert(1)}
+.topcar{position:fixed;right:20px;bottom:20px;z-index:50;width:56px;height:72px;padding:0;border:none;background:transparent;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;filter:drop-shadow(0 6px 10px rgba(0,0,0,.22))}
+.topcar.show{opacity:1;pointer-events:auto}
+.topcar.show:hover{transform:translateY(-4px);transition:opacity .3s,transform .2s}
+.topcar.drive{opacity:0;pointer-events:none;transform:translateY(-110vh);transition:transform .9s cubic-bezier(.55,0,.8,.2),opacity .25s .7s}
+.smoke{position:fixed;right:20px;bottom:12px;width:56px;height:40px;z-index:49;pointer-events:none;opacity:1;transition:opacity .6s}
+.smoke span{position:absolute;bottom:0;width:22px;height:22px;border-radius:50%;background:rgba(150,150,150,.8);opacity:0}
+.smoke.on span{animation:puff .9s ease-out infinite}
+.smoke.fade{opacity:0}
+@keyframes puff{0%{transform:translate(0,0) scale(.3);opacity:.9}100%{transform:translate(var(--dx),22px) scale(2.4);opacity:0}}
+.topcar.burn{opacity:1;animation:shake .07s linear infinite}
+@keyframes shake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-1.5px,1px) rotate(-2deg)}50%{transform:translate(1.5px,0) rotate(2deg)}75%{transform:translate(-1px,-1px) rotate(-1deg)}100%{transform:translate(0,0) rotate(0)}}
+.topcar:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.ph{background:var(--accent);color:var(--accentInk);padding:0 4px;border-radius:4px}
+.faq{border-top:1px solid var(--line)}
+.faq:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px;font-size:19px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:400;line-height:1;color:var(--muted);transition:transform .2s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 22px;font-size:17px;line-height:1.65;color:var(--muted);max-width:62ch}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"text img" "btns .";column-gap:56px;row-gap:36px}
+.hero-text{grid-area:text}.hero-img{grid-area:img;min-height:320px;position:relative}.hero-img img{position:absolute;inset:0}.hero-btns{grid-area:btns}
+@media (max-width: 860px){.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "img" "btns";row-gap:28px}.hero-img{aspect-ratio:10/9;min-height:0}}
+</style>
+</head>
+<body>
+<div id="seitenanfang" class="site" style="min-height: 100vh">
+
+
+<div style="background: var(--accent); color: var(--accentInk); text-align: center; font-size: 14px; font-weight: 600; padding: 10px 16px">Entwurf zur Ansicht. Das Anmeldeformular verschickt noch keine Daten.</div>
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<span style="width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: var(--accentInk); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">Logo</span>
+<span style="font-weight: 700; font-size: 17px; letter-spacing: -0.01em">VKU Oberbaselbiet</span>
+</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<a class="navlink" href="#kurse">Kurse</a>
+<a class="navlink" href="#lokale">Lokale</a>
+<a class="navlink" href="#team">Fahrlehrer</a>
+<a class="navlink" href="#faq">FAQ</a>
+<a class="navlink" href="#anmeldung">Anmeldung</a>
+<button type="button" class="btn ghost" style="min-height: 44px; padding: 0 16px; font-size: 14px" data-action="theme" aria-label="Hell oder dunkel umschalten">Dunkel</button>
+</nav>
+</div>
+</header>
+
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 72px">
+<div class="hero">
+<div class="hero-text">
+<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">8 Fahrlehrer · 3 Lokale · 1 Anmeldung</p>
+<h1 class="serif" style="margin: 0; font-size: clamp(44px, 6.2vw, 88px); line-height: 0.98; letter-spacing: -0.02em">Verkehrskunde und Nothelfer im Oberbaselbiet.</h1>
+<p style="margin: 28px 0 0; font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 46ch">Wähl dein Lokal, such dir einen Termin aus und meld dich direkt online an. Einfacher geht’s nicht.</p>
+</div>
+<div class="hero-img">
+<img src="bilder/platzhalter-lokal.svg" alt="Platzhalter: Lokal mit Fahrlehrern und Fahrschulauto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; border-radius: 20px; border: 1px solid var(--line)">
+</div>
+<div class="hero-btns" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn" href="#lokale">Termine ansehen</a>
+<a class="btn ghost" href="#team">Unsere Fahrlehrer</a>
+</div>
+</div>
+</section>
+
+<section id="kurse" style="background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px">
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
+<h2 class="serif" style="margin: 8px 0 12px; font-size: clamp(32px, 8vw, 40px); line-height: 1.05; hyphens: auto; overflow-wrap: break-word">Verkehrskundeunterricht</h2>
+<p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">4 Abende à 2 Lektionen zu Gefahrenlehre, Verkehrsumwelt, Verkehrssinnbildung, Fahrphysik und verantwortungsbewusstem Verhalten im Verkehr. Teilnehmen kannst du mit einem gültigen Lernfahrausweis der Kategorie A, A1, B oder B1. Die Kursbestätigung ist 2 Jahre gültig und muss bei der Anmeldung zur praktischen Führerprüfung vorgelegt werden.</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700">CHF XX.XX</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
+<h2 class="serif" style="margin: 8px 0 12px; font-size: clamp(32px, 8vw, 40px); line-height: 1.05; hyphens: auto; overflow-wrap: break-word">Nothelferkurs</h2>
+<p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">Braucht es für den Lernfahrausweis. [Dauer und Kurzbeschreibung folgen]</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700">CHF XX.XX</p>
+</div>
+</div>
+</section>
+
+<section id="lokale" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 72px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+<h2 class="serif" style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1">Drei Lokale. Alle Termine.</h2>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Beispieltermine für den Entwurf</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px">
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 160px; background: var(--soft); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; border-bottom: 1px solid var(--line)">Foto Lokal folgt</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div>
+<h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1">Gelterkinden</h3>
+<p style="margin: 6px 0 0; font-size: 15px; color: var(--muted)">Schulgasse 3, 4460 Gelterkinden</p>
+<p style="margin: 4px 0 0; font-size: 14px; color: var(--muted)">Nähe Dorfplatz, direkt neben Schaub-Wohndesign</p>
+<a href="https://www.google.com/maps/search/?api=1&query=Schulgasse%203%2C%204460%20Gelterkinden" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; min-height: 44px; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Route planen</a>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">VKU</h4>
+<div class="slot"><span style="font-size: 15px">Mo 26.10. – Do 29.10., 18:30–20:30</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Gelterkinden · Mo 26.10. – Do 29.10., 18:30–20:30">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Mo 23.11. – Do 26.11., 18:30–20:30</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Gelterkinden · Mo 23.11. – Do 26.11., 18:30–20:30">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Mo 14.12. – Do 17.12., 18:30–20:30</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Gelterkinden · Mo 14.12. – Do 17.12., 18:30–20:30">Anmelden</button></div>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">Nothelfer</h4>
+<div class="slot"><span style="font-size: 15px">Fr 06.11. + Sa 07.11.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Gelterkinden · Fr 06.11. + Sa 07.11.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 04.12. + Sa 05.12.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Gelterkinden · Fr 04.12. + Sa 05.12.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 08.01. + Sa 09.01.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Gelterkinden · Fr 08.01. + Sa 09.01.">Anmelden</button></div>
+</div>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 160px; background: var(--soft); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; border-bottom: 1px solid var(--line)">Foto Lokal folgt</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div>
+<h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1">Liestal</h3>
+<p style="margin: 6px 0 0; font-size: 15px; color: var(--muted)">[Adresse folgt]</p>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">VKU</h4>
+<div class="slot"><span style="font-size: 15px">Mo 02.11. – Do 05.11., 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Liestal · Mo 02.11. – Do 05.11., 19:00–21:00">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Mo 30.11. – Do 03.12., 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Liestal · Mo 30.11. – Do 03.12., 19:00–21:00">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Mo 11.01. – Do 14.01., 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Liestal · Mo 11.01. – Do 14.01., 19:00–21:00">Anmelden</button></div>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">Nothelfer</h4>
+<div class="slot"><span style="font-size: 15px">Fr 13.11. + Sa 14.11.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Liestal · Fr 13.11. + Sa 14.11.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 11.12. + Sa 12.12.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Liestal · Fr 11.12. + Sa 12.12.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 15.01. + Sa 16.01.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Liestal · Fr 15.01. + Sa 16.01.">Anmelden</button></div>
+</div>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 160px; background: var(--soft); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; border-bottom: 1px solid var(--line)">Foto Lokal folgt</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div>
+<h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1">Oberdorf</h3>
+<p style="margin: 6px 0 0; font-size: 15px; color: var(--muted)">Hauptstrasse 72, 4436 Oberdorf</p>
+<a href="https://www.google.com/maps/search/?api=1&query=Hauptstrasse%2072%2C%204436%20Oberdorf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; min-height: 44px; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Route planen</a>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">VKU</h4>
+<div class="slot"><span style="font-size: 15px">Di 06.10. – Do 15.10., Di + Do 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Oberdorf · Di 06.10. – Do 15.10., Di + Do 19:00–21:00">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Di 03.11. – Do 12.11., Di + Do 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Oberdorf · Di 03.11. – Do 12.11., Di + Do 19:00–21:00">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Di 01.12. – Do 10.12., Di + Do 19:00–21:00</span><button type="button" class="pick" data-action="pick" data-kurs="VKU · Oberdorf · Di 01.12. – Do 10.12., Di + Do 19:00–21:00">Anmelden</button></div>
+</div>
+<div>
+<h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">Nothelfer</h4>
+<div class="slot"><span style="font-size: 15px">Fr 20.11. + Sa 21.11.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Oberdorf · Fr 20.11. + Sa 21.11.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 18.12. + Sa 19.12.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Oberdorf · Fr 18.12. + Sa 19.12.">Anmelden</button></div>
+<div class="slot"><span style="font-size: 15px">Fr 22.01. + Sa 23.01.</span><button type="button" class="pick" data-action="pick" data-kurs="Nothelfer · Oberdorf · Fr 22.01. + Sa 23.01.">Anmelden</button></div>
+</div>
+</div>
+</article>
+</div>
+</section>
+
+<section id="team" style="background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Deine Fahrlehrer.</h2>
+<p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch">Acht Fahrlehrer aus der Region, ein gemeinsames Kursangebot.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px">
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/rahel-schaffner.jpg" alt="Rahel Schaffner" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% 50%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Rahel Schaffner</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Rahels Fahrschule</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">[Kurzportrait folgt]</p>
+<a href="https://www.facebook.com/profile.php?id=61575925460231" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zu Facebook ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/ken-klauser.jpg" alt="Ken Klauser" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Ken Klauser</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Catch Ken, Basel</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">Ich bin Ken Klauser, Fahrlehrer mit eidgenössischem Fachausweis aus dem Kanton Baselland. Der Weg zum Führerausweis ist für viele ein grosser Schritt, und genau dabei begleite ich dich mit Geduld, Fachwissen und einem klar strukturierten Ausbildungsplan. Weil alle anders lernen, passe ich meine Fahrstunden individuell an, damit du dich wohlfühlst und selbstbewusst ans Steuer gehst. Mit der Qualidrive-App hast du deinen Lernstand, deine Fahrstunden und Rechnungen jederzeit dabei. Gemeinsam erreichen wir dein Ziel, die Fahrprüfung und ein sicheres Gefühl im Strassenverkehr.</p>
+<a href="https://www.catch-ken.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/dominic-imhof.jpg" alt="Dominic Imhof" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Dominic Imhof</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Dominic Imhof</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">Ich bin Dominic Imhof und wohne mit meiner Familie in Lausen BL. Nach meiner Lehre als Informatiker EFZ habe ich berufsbegleitend die Ausbildung zum Fahrlehrer mit eidgenössischem Fachausweis gemacht und im September 2023 abgeschlossen. Unterwegs bin ich in der Region Basel, Liestal und Sissach. Ausserdem bin ich Mitglied im Aargauer Fahrlehrerverband AFV.</p>
+<a href="https://www.dominicimhof.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/georg-schweingruber.jpg" alt="Georg Schweingruber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 60% 30%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Georg Schweingruber</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Schweingruber</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">[Kurzportrait folgt]</p>
+<a href="http://fahrschule-schweingruber.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/christian-wuethrich.jpg" alt="Christian Wüthrich" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 64% 30%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Christian Wüthrich</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Böbbi’s Fahrschuel, Gelterkinden</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">Ich bin Christian Wüthrich, aufgewachsen in Gelterkinden und seit 2007 staatlich geprüfter Fahrlehrer. Vielleicht kennst du mich auch als Komiker «dr Hugi», mit dem ich jahrelang auf Schweizer Bühnen unterwegs war. In meiner Freizeit bin ich bei Familie und Freunden, trainiere unser Frauen-Team in der 3. Liga und stehe auf dem Tennisplatz, auch wenn aus mir kein Roger Federer mehr wird. Deine Fahrstunden machst du bei mir im Mazda CX-30 mit Automatik, und ich verspreche dir, du wirst ihn lieben!</p>
+<a href="https://www.boebbis-fahrschuel.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/thomas-egenter.jpg" alt="Thomas Egenter" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 78% 40%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Thomas Egenter</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Egi’s Fahrschuel, Gelterkinden</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">Ich bin Thomas Egenter, kurz Thomi. Bei mir lernst du in freundschaftlicher und lockerer Atmosphäre, sicher im heutigen Strassenverkehr unterwegs zu sein, denn Autofahren soll Spass machen. Ich bringe dir auf dem schnellsten Weg alles bei, was du brauchst, und ganz nebenbei bestehst du dann auch die Führerprüfung. Für Senioren und Wiedereinsteiger biete ich Feedback-Fahrten an, wenn du Fragen zu neuen Regeln hast oder einfach eine Rückmeldung zu deinem Fahrstil möchtest.</p>
+<a href="http://www.egis-fahrschuel.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/roger-schreiber.jpg" alt="Roger Schreiber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Roger Schreiber</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Schreiber, Gelterkinden</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">[Kurzportrait folgt]</p>
+<a href="https://www.fahrschule-schreiber.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="bilder/thomas-stuck.jpg" alt="Thomas Stuck" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 76% 20%; background: var(--line)">
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Thomas Stuck</h3>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Stuck, Niederdorf</p>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; flex-grow: 1">Auto, Anhänger und Motorrad. [Kurzportrait folgt]</p>
+<a href="https://fahrschule-stuck.ch/" target="_blank" rel="noopener" style="margin-top: 10px; font-size: 15px; font-weight: 600">Zur Webseite ↗</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="anmeldung" style="max-width: 760px; margin: 0 auto; padding: 96px 24px">
+<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Anmeldung.</h2>
+<div id="formular">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="background: var(--soft); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<div style="flex: 1 1 240px; min-width: 0">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Gewählter Kurs</p>
+<p style="margin: 6px 0 0; font-size: 18px; font-weight: 600"><span id="gewaehlt">Bitte oben bei einem Lokal einen Termin wählen</span></p>
+</div>
+<button type="button" class="btn" id="zu-terminen" data-action="lokale" style="background: var(--accent); color: var(--accentInk)">Zu den Terminen ↑</button>
+<button type="button" id="aendern" data-action="lokale" hidden style="background: transparent; border: none; padding: 0 4px; min-height: 44px; font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer">Ändern</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Vorname<input type="text" autocomplete="given-name"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Name<input type="text" autocomplete="family-name"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Strasse und Nr.<input type="text" autocomplete="street-address"></label>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">PLZ<input type="text" inputmode="numeric" autocomplete="postal-code"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Ort<input type="text" autocomplete="address-level2"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600"><span style="display: flex; flex-direction: column; gap: 2px">FABER-PIN<span style="font-size: 13px; font-weight: 400; color: var(--muted)">Die PIN, die du vom Strassenverkehrsamt bekommen hast</span></span><input type="text"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Telefon<input type="tel" autocomplete="tel"></label>
+<div aria-hidden="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden"><label>Bitte leer lassen<input type="text" name="website" tabindex="-1" autocomplete="off" id="hp"></label></div>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: var(--muted)"><input type="checkbox" style="width: 22px; min-height: 22px; height: 22px; margin-top: 2px; flex-shrink: 0"><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben für die Kursorganisation verwendet werden.</span></label>
+<button type="button" class="btn" style="align-self: flex-start; background: var(--accent); color: var(--accentInk)" data-action="send">Verbindlich anmelden</button>
+</div>
+</div>
+<div id="danke" hidden>
+<div style="background: var(--soft); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
+<p class="serif" style="margin: 0; font-size: 36px">Danke, das hat geklappt.</p>
+<p style="margin: 12px 0 0; line-height: 1.6; color: var(--muted)">Du bekommst gleich eine Bestätigung. Wir sehen uns im Kurs. [Text folgt]</p>
+<button type="button" class="btn ghost" style="margin-top: 20px" data-action="reset">Weitere Anmeldung</button>
+</div>
+</div>
+</section>
+
+<section id="faq" style="background: var(--soft); border-top: 1px solid var(--line)">
+<div style="max-width: 860px; margin: 0 auto; padding: 96px 24px">
+<h2 class="serif" style="margin: 0 0 40px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Häufige Fragen.</h2>
+<div>
+<details class="faq"><summary>Was ist der Verkehrskundeunterricht (VKU)?</summary><p>Im VKU lernst du, Gefahren im Strassenverkehr früh zu erkennen und richtig zu reagieren. Der Kurs dauert 8 Lektionen, aufgeteilt auf 4 Abende à 2 Lektionen. Die Kursbestätigung musst du bei der Anmeldung zur praktischen Führerprüfung vorlegen.</p></details>
+<details class="faq"><summary>Was brauche ich, um den VKU zu besuchen?</summary><p>Du brauchst einen gültigen Lernfahrausweis der Kategorie A oder A1 (Motorrad) beziehungsweise B oder B1 (Auto). <span class="ph">[Was sonst noch mitzubringen ist, bitte ergänzen]</span></p></details>
+<details class="faq"><summary>Muss ich den VKU besuchen, wenn ich schon einen Führerausweis habe?</summary><p>Nein. Wenn du bereits einen Führerausweis der Kategorie A, A1, B oder B1 hast, musst du den VKU nicht nochmals besuchen.</p></details>
+<details class="faq"><summary>Wie lange ist der VKU gültig?</summary><p>Nach dem Abschluss ist die Kursbestätigung 2 Jahre gültig.</p></details>
+<details class="faq"><summary>Wann muss ich den Nothelferkurs machen?</summary><p>Den Nothelferkurs brauchst du für das Gesuch um den Lernfahrausweis, also ganz am Anfang. Der Kurs dauert <span class="ph">[Dauer]</span>.</p></details>
+<details class="faq"><summary>Was ist die FABER-PIN und wo finde ich sie?</summary><p>Die FABER-PIN bekommst du vom Strassenverkehrsamt. <span class="ph">[Wann und wie man sie bekommt, bitte ergänzen]</span> Wir brauchen sie bei der Anmeldung, um deinen Kursbesuch zu erfassen.</p></details>
+<details class="faq"><summary>Muss ich den VKU bei meinem eigenen Fahrlehrer besuchen?</summary><p>Nein. Du kannst dich in jedem unserer drei Lokale anmelden, egal bei wem von uns du Fahrstunden nimmst. <span class="ph">[Gilt das auch für Fahrschüler anderer Fahrschulen? Bitte klären]</span></p></details>
+<details class="faq"><summary>Wie bezahle ich den Kurs?</summary><p><span class="ph">[Bar vor Ort, Rechnung oder TWINT, bitte ergänzen]</span></p></details>
+<details class="faq"><summary>Bekomme ich eine Bestätigung meiner Anmeldung?</summary><p><span class="ph">[Per E-Mail oder SMS, bitte ergänzen]</span></p></details>
+<details class="faq"><summary>Was mache ich, wenn ich nicht kommen kann?</summary><p>Melde dich so früh wie möglich bei uns. <span class="ph">[Regeln zur Abmeldung, bitte ergänzen]</span></p></details>
+</div>
+<div style="margin-top: 56px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div>
+<h3 class="serif" style="margin: 0; font-size: 34px; line-height: 1.05">Noch Fragen?</h3>
+<p style="margin: 8px 0 0; font-size: 17px; color: var(--muted)">Melde dich direkt bei einem unserer Fahrlehrer.</p>
+</div>
+<a class="btn" href="#team">Zu den Fahrlehrern ↑</a>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: var(--muted)">
+<span>© 2026 VKU Oberbaselbiet</span>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="#top">Login für Fahrlehrer</a>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 28px">
+<a href="#top" class="credit" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 12px; color: var(--muted)">Webseite erstellt von<img class="credit-logo" src="bilder/avadam.png" alt="AVA-DAM" style="height: 14px; width: auto; display: block"></a>
+</div>
+</footer>
+
+<div class="smoke" id="smoke" aria-hidden="true">
+<span style="left: -4px; --dx: -16px; animation-delay: 0s"></span>
+<span style="left: -2px; --dx: -10px; animation-delay: .18s"></span>
+<span style="left: 0px; --dx: -20px; animation-delay: .36s"></span>
+<span style="right: -4px; --dx: 16px; animation-delay: .09s"></span>
+<span style="right: -2px; --dx: 10px; animation-delay: .27s"></span>
+<span style="right: 0px; --dx: 20px; animation-delay: .45s"></span>
+</div>
+<button type="button" class="topcar" id="topcar" aria-label="Nach oben">
+<svg width="56" height="72" viewBox="0 0 56 72" aria-hidden="true">
+<rect x="4" y="12" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="46" y="12" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="4" y="48" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="46" y="48" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="8" y="4" width="40" height="64" rx="14" fill="#FFFFFF" stroke="#CFC9BF" stroke-width="1.5"></rect>
+<rect x="24" y="4.8" width="8" height="62.4" fill="#D7192A"></rect>
+<path d="M14 26 Q28 18 42 26 L39 34 Q28 30 17 34 Z" fill="#33404F"></path>
+<path d="M17 52 Q28 55 39 52 L41 58 Q28 62 15 58 Z" fill="#33404F"></path>
+<rect x="11" y="6" width="9" height="4" rx="2" fill="#FFE07A"></rect>
+<rect x="36" y="6" width="9" height="4" rx="2" fill="#FFE07A"></rect>
+<rect x="12" y="63" width="8" height="3" rx="1.5" fill="#D7192A"></rect>
+<rect x="36" y="63" width="8" height="3" rx="1.5" fill="#D7192A"></rect>
+</svg>
+</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
