@@ -1,11 +1,11 @@
 // VKU Oberbaselbiet, Entwurf. Steuert Dunkelmodus, Terminauswahl, Formular und das Auto nach oben.
 (function () {
   var site = document.querySelector('.site');
-  var themeBtn = document.querySelector('[data-action="theme"]');
+  var themeBtns = document.querySelectorAll('[data-action="theme"]');
 
   function setTheme(dark) {
     site.classList.toggle('dark', dark);
-    if (themeBtn) themeBtn.textContent = dark ? 'Hell' : 'Dunkel';
+    themeBtns.forEach(function (b) { b.textContent = dark ? 'Hell' : 'Dunkel'; });
     try { localStorage.setItem('vku-theme', dark ? 'dark' : 'light'); } catch (e) {}
   }
   var saved = null;
@@ -31,11 +31,25 @@
     if (aendern) aendern.hidden = !text;
   }
 
+  // Menü auf dem Handy
+  var menu = document.getElementById('menu-mob');
+  var menuBtn = document.querySelector('[data-action="menu"]');
+  function setMenu(open) {
+    if (!menu || !menuBtn) return;
+    menu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.querySelector('.ico-open').hidden = open;
+    menuBtn.querySelector('.ico-close').hidden = !open;
+    menuBtn.setAttribute('aria-label', open ? 'Menü schliessen' : 'Menü öffnen');
+  }
+  document.querySelectorAll('[data-close-menu]').forEach(function (l) { l.addEventListener('click', function () { setMenu(false); }); });
+
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-action]');
     if (!t) return;
     var a = t.getAttribute('data-action');
-    if (a === 'theme') setTheme(!site.classList.contains('dark'));
+    if (a === 'menu') setMenu(menu && menu.hidden);
+    else if (a === 'theme') setTheme(!site.classList.contains('dark'));
     else if (a === 'lokale') scrollToId('lokale');
     else if (a === 'pick') {
       setChoice(t.getAttribute('data-kurs'));
